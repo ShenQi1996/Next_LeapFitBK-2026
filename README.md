@@ -17,9 +17,20 @@ A professional Next.js landing page for Secure Fit LLC BK, a respiratory fit tes
 
 Before you begin, ensure you have the following installed on your system:
 
-- **Node.js** (version 20.11.1) - [Download Node.js](https://nodejs.org/)
+- **Node.js** (**exact version `20.11.1`**) - [Download Node.js](https://nodejs.org/)
 - **npm** (version 10+ recommended, comes with Node.js) or **yarn** package manager
 - **Git** (for version control)
+
+### Recommended: Use nvm for Node version management
+
+This project is pinned to Node `20.11.1` via `.nvmrc` and `package.json` (`engines`), so using `nvm` helps avoid version mismatch issues.
+
+```bash
+nvm install 20.11.1
+nvm use 20.11.1
+node --version
+npm --version
+```
 
 To check if you have Node.js installed, run:
 ```bash
@@ -212,7 +223,7 @@ For deployment on a traditional server (AWS, DigitalOcean, etc.):
 
 1. **Create Dockerfile**:
    ```dockerfile
-   FROM node:18-alpine
+   FROM node:20.11.1-alpine
    
    WORKDIR /app
    
@@ -306,6 +317,24 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
+### Issue: Node version mismatch or unsupported engine
+
+**Symptoms**:
+- Install/build errors mentioning unsupported Node version
+- `npm` warnings related to `engines`
+
+**Solution**:
+```bash
+nvm use 20.11.1
+node --version
+npm --version
+```
+If Node `20.11.1` is not installed yet:
+```bash
+nvm install 20.11.1
+nvm use 20.11.1
+```
+
 ### Issue: Build fails
 
 **Solution**:
@@ -341,5 +370,5 @@ ISC
 
 ---
 
-**Last Updated**: 2024
+**Last Updated**: 2026
 

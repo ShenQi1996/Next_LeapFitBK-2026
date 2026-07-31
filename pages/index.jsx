@@ -23,18 +23,6 @@ const HomePage = () => {
           </div>
           <div className={styles.navActions}>
             <a 
-              className={styles.navButtonSecondary}
-              href={businessPhoneHref}
-            >
-              Call Us
-            </a>
-            <a 
-              className={styles.navButtonSecondary}
-              href={`mailto:${emailAddress}`}
-            >
-              Email Us
-            </a>
-            <a 
               className={styles.navButton} 
               href={bookingUrl}
               target='_blank'

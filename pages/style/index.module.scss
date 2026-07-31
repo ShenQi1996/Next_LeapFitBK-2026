@@ -79,22 +79,6 @@
     }
 }
 
-.navButtonSecondary {
-    padding: 0.6rem 1.1rem;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #005889;
-    background: rgba(0, 88, 137, 0.08);
-    border: 1px solid rgba(0, 88, 137, 0.25);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    
-    &:hover {
-        background: rgba(0, 88, 137, 0.16);
-    }
-}
-
 // Hero Section
 .hero {
     position: relative;
@@ -694,6 +678,27 @@
 }
 
 // Responsive Design
+@media screen and (max-width: 767px) {
+    .nav {
+        padding: 0.75rem 1rem;
+    }
+
+    .navTitle {
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+
+    .navActions {
+        flex-shrink: 0;
+    }
+
+    .navButton {
+        padding: 0.55rem 0.85rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .brandTitle {
         font-size: 4.5rem;
